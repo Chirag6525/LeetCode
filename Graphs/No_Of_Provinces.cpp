@@ -24,3 +24,9 @@ public:
         return province;
     }
 };
+int main(){
+    vector<vector<int>> isConnected {{1,1,0},{1,1,0},{0,0,1}};
+    Solution s;
+    cout << "Number of province: " << s.findCircleNum(isConnected);
+    return 0;
+}
