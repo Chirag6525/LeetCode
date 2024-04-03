@@ -3,7 +3,22 @@ using namespace std;
 class Solution {
 public:
     double myPow(double x, int n) {
-       return pow(x,n); 
+        long long b = n;
+        if(x==1) return double(1);
+        if(b<0){
+            x=1/x;
+            b=-b;
+        }
+        double ans = 1.0;
+        while(b>0){
+            if(b%2==1){
+                ans = ans*x;
+            }
+            x =x*x;
+            b = b/2;
+        }
+        return ans;
+    //    return pow(x,n); 
     }
 };
 int main(){
